@@ -38,7 +38,11 @@ public final class App {
        System.out.println("\nYour body mass index is:" + bmi);
        System.out.println("Attending to the bmi, you have " + classification);
     }
+<<<<<<< HEAD
     private static double IdentifieOrNew(double height, double weight){
+=======
+    private static double IdentifieOrNew(double heigth, double weigth){
+>>>>>>> 149170e654d5b7e4a9205d6c1c77dda8ec72b3c8
         double bmi = weight/(Math.pow(height, 2));
         return Math.rint(bmi*100)/100;
     }
