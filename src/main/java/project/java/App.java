@@ -8,24 +8,24 @@ public final class App {
     public static void main(String[] args)
     {
         Scanner sr = new Scanner(System.in);
-        System.out.print("Enter your heigth in meters:");
-        double heigth = sr.nextDouble();
-        System.out.print("Enter your weigth in kilograms:");
-        double weigth = sr.nextDouble();
+        System.out.print("Enter your height in meters:");
+        double height = sr.nextDouble();
+        System.out.print("Enter your weight in kilograms:");
+        double weight = sr.nextDouble();
         sr.close();
-        double bmi = IdentifieOrNew(heigth, weigth);
+        double bmi = IdentifieOrNew(height, weight);
        
         String classification = "";
         if(bmi <= 16){
         classification = "Severe thinness";
        } else if(bmi <= 17){
-       classification = "Moderate thinnes";
+       classification = "Moderate thinness";
        } else if(bmi <= 18.5){
-       classification = "Acceptable thinnes";
+       classification = "Acceptable thinness";
        } else if(bmi <= 25){
-        classification = "Normal weigth";
+        classification = "Normal weight";
        } else if(bmi <= 30){
-        classification = "Excess weigth";
+        classification = "Excess weight";
        } else if(bmi <= 35){
         classification = "Obese: type 1";
        } else if(bmi <= 40){
@@ -38,8 +38,8 @@ public final class App {
        System.out.println("\nYour body mass index is:" + bmi);
        System.out.println("Attending to the bmi, you have " + classification);
     }
-    private static double IdentifieOrNew(double heigth, double weigth){
-        double bmi = weigth/(Math.pow(heigth, 2));
+    private static double IdentifieOrNew(double height, double weight){
+        double bmi = weight/(Math.pow(height, 2));
         return Math.rint(bmi*100)/100;
     }
 }
